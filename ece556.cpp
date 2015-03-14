@@ -16,7 +16,13 @@ int startsWith(const char* start, const char* str) {
     return strLength < startLength ? 0 : strncmp(start, str, startLength) == 0;
 }
 
-
+/**
+ * This function gets all the inputs from the input file specified by fileName 
+ * and assign them to routing instance's fields
+ * @param  fileName input file to be read
+ * @param  rst      a pointer to the routing instance
+ * @return          1 on successful
+ */
 int readBenchmark(const char *fileName, routingInst *rst) {
     char linebuff[80];
 
